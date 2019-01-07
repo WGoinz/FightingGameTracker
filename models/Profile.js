@@ -5,6 +5,7 @@ const Profile = new Schema({
     username: String,
     profilePic: String,
     slogan: String,
+    email: String,
     characters: [{
         type: Schema.Types.ObjectId,
         ref: 'Character'
