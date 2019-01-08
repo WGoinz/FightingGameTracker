@@ -3,14 +3,24 @@ Profile = require("../models/Profile")
 const profileController = {
     index: (req, res) => {
         console.log("Profile controller working")
-        res.render("profile/index")
+        Profile.find({}).then(profile => {
+            res.render('profile/index', { profile })
+        })
     },
     new: (req, res) => {
+        console.log("New view")
         res.render("profile/new")
     },
     create: (req, res) => {
         console.log(req.body)
-        res.redirect("/")
+        Profile.create({
+            username: req.body.username,
+            profilePic: req.body.profilePic,
+            slogan: req.body.slogan,
+            email: req.body.email
+        }).then(newProfile => {
+            res.redirect('profile/index')
+        })
     }
 }
 module.exports = profileController

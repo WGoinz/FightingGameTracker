@@ -8,7 +8,7 @@ Stats.deleteMany({}).then(() => {
             .then(() => {
                 return Profile.create({
                     username: "Ryu",
-                    profilePic: "https://imgur.com/gallery/EuDyMPK",
+                    profilePic: "https://i.imgur.com/cvpuu7I.png",
                     slogan: "The answer lies in the heart of battle",
                     email: "ryu@capcom.com",
                     characters: []
@@ -38,7 +38,6 @@ Stats.deleteMany({}).then(() => {
                             victoryPercentage: 83
                         }).then((stat) => {
                             profile.characters[0].stats.push(stat)
-                            // console.log(profile)
                         })
 
                         const newStat2 = Stats.create({
@@ -49,7 +48,6 @@ Stats.deleteMany({}).then(() => {
                             victoryPercentage: 50
                         }).then((stat) => {
                             profile.characters[1].stats.push(stat)
-                            // console.log(profile)
                         })
                         Promise.all([newChar, newStat], [newChar2, newStat2])
                             .then(() => {
