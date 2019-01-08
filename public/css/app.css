@@ -38,6 +38,10 @@ h1 {
     max-height: 150px;
 }
 
+.profile button {
+    margin-top: 10px;
+}
+
 .center {
     text-align: center;
 }

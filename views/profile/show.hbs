@@ -1,35 +1,11 @@
 <div>
-    <h1>CREATE | PROFILE</h1>
+    <h1>SHOW ROUTE</h1>
 </div>
 
 <div class="center">
-    {{!-- <span>CREATE NEW USER</span> --}}
-    <form class="pure-form pure-form-aligned">
-        <fieldset>
-            <div class="pure-control-group">
-                <label for="name">Username</label>
-                <input id="name" type="text" placeholder="Gamertag" name="username">
-                {{!-- <span class="pure-form-message-inline">This is a required field.</span> --}}
-            </div>
+    <h4>{{profile._id}}</h4>
+    <h2>{{profile.username}}</h2>
+    <h2>{{profile.slogan}}</h2>
 
-            <div class="pure-control-group">
-                <label for="email">Email Address</label>
-                <input id="email" type="email" placeholder="Email Address" name="email">
-            </div>
 
-            <div class="pure-control-group">
-                <label for="password">Picture URL</label>
-                <input id="password" type="password" placeholder="IMGUR or GIPHY" name="profilePic">
-            </div>
-
-            <div class="pure-control-group">
-                <label for="email">Slogan</label>
-                <input id="email" type="email" placeholder="Personal Message" name="slogan">
-            </div>
-
-            <div class="pure-controls">
-                <button type="submit" class="pure-button pure-button-primary">Submit</button>
-            </div>
-        </fieldset>
-    </form>
 </div>

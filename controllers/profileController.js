@@ -21,6 +21,13 @@ const profileController = {
         }).then(newProfile => {
             res.redirect('/')
         })
-    }
+    },
+    show: (req, res) => {
+        const profileId = req.params.id
+        Profile.findById(profileId).then((profile) => {
+          console.log(profile)
+          res.render('profile/show', { profile })
+        })
+      } 
 }
 module.exports = profileController
