@@ -7,6 +7,9 @@ const statsController = require('../controllers/statsController')
 router.use(express.static('public'))
 
 router.get('/', profileController.index)
+router.post('/', profileController.create)
+router.get('/new', profileController.new)
+
 
 router.get('/:id/character', characterController.index)
 
