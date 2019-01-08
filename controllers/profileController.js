@@ -19,7 +19,7 @@ const profileController = {
             slogan: req.body.slogan,
             email: req.body.email
         }).then(newProfile => {
-            res.redirect('profile/index')
+            res.redirect('/')
         })
     }
 }
