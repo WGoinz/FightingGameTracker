@@ -26,6 +26,7 @@ router.delete('/:id/characters/:characterId/', characterController.delete)
 router.get('/:id/characters/:characterId/stats', statsController.index)
 router.post('/:id/characters/:characterId/stats', statsController.create)
 router.get('/:id/characters/:characterId/stats/new', statsController.new)
+router.get('/:id/characters/:characterId/stats/:statId', statsController.show)
 
 
 

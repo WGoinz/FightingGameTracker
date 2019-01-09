@@ -32,6 +32,14 @@ const statsController = {
                 res.redirect(`/${profileId}/characters/${characterId}/stats`)
             })
         })
+    },
+    show: (req, res) => {
+        const characterId = req.params.characterId
+        const profileId = req.params.id
+        const statId = req.params.statId
+        Stats.findById(statId).then((stat) => {
+            res.render('stats/show', { stat, profileId, characterId })
+        })
     }
 }
 module.exports = statsController

@@ -2,7 +2,7 @@
     <h1 class="no-margin bottom-margin">Stats</h1>
 </div>
 {{!-- {{stats}} --}}
-{{!-- {{characterId}} --}}
+{{!-- {{characterId}}
 {{!-- {{profileId}} --}}
 
 <div>
@@ -27,7 +27,7 @@
             </tr>
         </tbody>
     </table>
-    <button>Edit</button>
+    <button class="pure-button pure-button-primary"><a href="/{{../profileId}}/characters/{{../characterId}}/stats/{{_id}}">VIEW</a></button>
     {{/each}}
 </div>
 <button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{characterId}}/stats/new">ADD</a></button>

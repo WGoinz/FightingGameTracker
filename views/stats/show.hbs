@@ -1,0 +1,26 @@
+<div>
+    <h1 class="no-margin bottom-margin">Individual Stat</h1>
+</div>
+<div>
+    <table class="pure-table">
+        <thead>
+            <tr>
+                <th>Tournament Name</th>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Total Matches</th>
+                <th>Victory Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{stat.tournamentName}}</td>
+                <td>{{stat.wins}}</td>
+                <td>{{stat.losses}}</td>
+                <td>{{stat.matches}}</td>
+                <td>{{stat.victoryPercentage}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{characterId}}/stats">BACK</a></button>
