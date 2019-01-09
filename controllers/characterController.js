@@ -46,6 +46,14 @@ const characterController = {
             .then((character) => {
                 res.redirect(`/${profileId}`)
             })
+    },
+    delete: (req, res) => {
+        const profileId = req.params.id
+        const characterId = req.params.characterId
+        Character.findByIdAndDelete(characterId)
+            .then(() => {
+                res.redirect(`/${profileId}`)
+            })
     }
 }
 
