@@ -24,6 +24,10 @@ router.patch('/:id/characters/:characterId/', characterController.update)
 router.delete('/:id/characters/:characterId/', characterController.delete)
 
 router.get('/:id/characters/:characterId/stats', statsController.index)
+router.post('/:id/characters/:characterId/stats', statsController.create)
+router.get('/:id/characters/:characterId/stats/new', statsController.new)
+
+
 
 
 
