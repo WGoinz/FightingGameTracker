@@ -1,11 +1,25 @@
 <div>
-    <h1>SHOW ROUTE</h1>
+    <h1>MY PROFILE</h1>
 </div>
 
-<div class="center">
-    <h4>{{profile._id}}</h4>
-    <h2>{{profile.username}}</h2>
-    <h2>{{profile.slogan}}</h2>
+<div class="flex">
+    <div class="imgBorder">
+        <img class="profilePic" src="{{profile.profilePic}}" alt="profile picture">
 
+    </div>
+    <div>
+        <h2>{{profile.username}}</h2>
+        <h3>{{profile.slogan}}</h3>
+        <button>Edit Profile</button>
 
+    </div>
+</div>
+
+<div class="flex">
+    {{#each profile.characters}}
+    <div>
+        <h3>This is a character</h3>
+        <button>View Stats</button>
+    </div>
+    {{/each}}
 </div>

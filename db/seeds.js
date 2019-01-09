@@ -57,10 +57,10 @@ Stats.deleteMany({}).then(() => {
                     })
                 }).then(() => {
                     return Profile.create({
-                        username: "Ryu",
+                        username: "Yung Damage",
                         profilePic: "https://i.imgur.com/cvpuu7I.png",
                         slogan: "The answer lies in the heart of battle",
-                        email: "ryu@capcom.com",
+                        email: "yungdamage@capcom.com",
                         characters: []
                     }).then((profile) => {
                         const newChar = Character.create({
