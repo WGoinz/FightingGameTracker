@@ -15,7 +15,7 @@ router.patch('/:id', profileController.update)
 router.delete('/:id', profileController.delete)
 
 
-// router.get('/:id/character', characterController.index)
+router.get('/:id/character/:characterId', characterController.index)
 
 
 

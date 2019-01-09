@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 const Character = new Schema({
     name: String,
     archetype: String,
+    characterImg: String,
     stamina: Number,
     stats: [{
         type: Schema.Types.ObjectId,

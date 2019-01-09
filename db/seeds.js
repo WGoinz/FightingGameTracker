@@ -29,6 +29,7 @@ const newStat3 = new Stats({
 const newChar = new Character({
     name: "Ibuki",
     archetype: "Offensive",
+    characterImg: "https://i.imgur.com/kiJDFsA.jpg",
     stamina: 950,
     stats: [newStat, newStat2, newStat3]
 })
@@ -36,6 +37,7 @@ const newChar = new Character({
 const newChar2 = new Character({
     name: "Ryu",
     archetype: "Balanced",
+    characterImg: "https://i.imgur.com/EuDyMPK.jpg",
     stamina: 1000,
     stats: [newStat, newStat2, newStat3]
 })
@@ -43,6 +45,7 @@ const newChar2 = new Character({
 const newChar3 = new Character({
     name: "Bison",
     archetype: "Defensive",
+    characterImg: "https://i.imgur.com/HOkEbgl.jpg",
     stamina: 1000,
     stats: [newStat, newStat2]
 })

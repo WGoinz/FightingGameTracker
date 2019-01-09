@@ -2,6 +2,7 @@
     <h1>MY PROFILE</h1>
 </div>
 
+
 <div class="flex">
     <div class="imgBorder">
         <img class="profilePic" src="{{profile.profilePic}}" alt="profile picture">
@@ -22,9 +23,10 @@
 
 <div class="flex">
     {{#each profile.characters}}
-    <div>
-        <h3>This is a character</h3>
-        <button>View Stats</button>
+    <div class="flex-column charSpacing">
+        <h3>{{name}}</h3>
+        <img class="characterImg" src="{{characterImg}}">
+        <button><a href="{{../profile._id}}/character/{{_id}}" alt="view character">View Character</a></button>
     </div>
     {{/each}}
 </div>

@@ -24,9 +24,10 @@ const profileController = {
     },
     show: (req, res) => {
         const profileId = req.params.id
-        Profile.findById(profileId).then((profile) => {
+        Profile.findById(profileId).populate("characters").then((profile) => {
             // console.log(profile)
-            res.render('profile/show', { profile })
+            const characters = profile.characters
+            res.render('profile/show', { characters, profile })
         })
     },
     edit: (req, res) => {

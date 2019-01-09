@@ -11,14 +11,24 @@ body {
 h1 {
     color: black;
     text-align: center;
-    font-size: 75px;
+    font-size: 55px;
     border-bottom: 2px solid black;
     /* background-color: darkgrey; */
 }
 
 .flex {
     display: flex;
+    justify-content: space-between;
+}
+
+.flex-column {
+    display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+.charSpacing {
+    margin: 0 10px;
 }
 
 .profile {
@@ -47,6 +57,11 @@ h1 {
     width: 325px;
     height: 325px;
     padding: 5px;
+}
+
+.characterImg {
+    width: 150px;
+    height: 150px;
 }
 
 .center {
