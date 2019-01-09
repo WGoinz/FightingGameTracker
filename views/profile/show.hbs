@@ -1,9 +1,9 @@
 <div>
-    <h1>MY PROFILE</h1>
+    <h1 class="no-margin bottom-margin">MY PROFILE</h1>
 </div>
 
 
-<div class="flex">
+<div class="flex bottom-margin">
     <div class="imgBorder">
         <img class="profilePic" src="{{profile.profilePic}}" alt="profile picture">
 
@@ -19,14 +19,20 @@
     </div>
 </div>
 
+<div>
+    <h2 class="no-margin">CHARACTERS</h2>
+</div>
 
-
-<div class="flex">
+<div class="flex bottom-margin">
     {{#each profile.characters}}
     <div class="flex-column charSpacing">
         <h3>{{name}}</h3>
         <img class="characterImg" src="{{characterImg}}">
-        <button><a href="{{../profile._id}}/character/{{_id}}" alt="view character">View Character</a></button>
+        <button><a href="{{../profile._id}}/characters/{{_id}}" alt="view character">View Character</a></button>
     </div>
     {{/each}}
+</div>
+
+<div>
+    <button><a href="/{{profile._id}}/characters/new">Add New Character</a></button>
 </div>

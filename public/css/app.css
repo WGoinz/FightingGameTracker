@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    max-width: 70vw;
+    max-width: 60vw;
     margin: 0 auto;
     background-color: #FF6A45;
 }
@@ -31,6 +31,14 @@ h1 {
     margin: 0 10px;
 }
 
+.no-margin {
+    margin: 0;
+}
+
+.bottom-margin {
+    margin-bottom: 10px;
+}
+
 .profile {
     color: black;
     font-size: 40px;
@@ -54,8 +62,8 @@ h1 {
 }
 
 .profilePic {
-    width: 325px;
-    height: 325px;
+    width: 250px;
+    height: 250px;
     padding: 5px;
 }
 
@@ -84,4 +92,5 @@ h1 {
 
 .imgBorder {
     border: black 2px solid;
+    padding: 0;
 }
