@@ -1,35 +1,40 @@
 <div>
-    <h1>CREATE | PROFILE</h1>
+    <h1>EDIT | PROFILE</h1>
 </div>
 
-<div class="center">
+
+
+<div class="formcenter">
     {{!-- <span>CREATE NEW USER</span> --}}
-    <form class="pure-form pure-form-aligned">
+    <form class="pure-form pure-form-aligned" action="/{{profileId}}?_method=PATCH" method="POST">
         <fieldset>
             <div class="pure-control-group">
                 <label for="name">Username</label>
-                <input id="name" type="text" placeholder="Gamertag" name="username">
+                <input id="name" type="text" placeholder="Gamertag" name="username" value="">
                 {{!-- <span class="pure-form-message-inline">This is a required field.</span> --}}
             </div>
 
             <div class="pure-control-group">
                 <label for="email">Email Address</label>
-                <input id="email" type="email" placeholder="Email Address" name="email">
+                <input id="email" type="email" placeholder="Email Address" name="email" value="">
             </div>
 
             <div class="pure-control-group">
                 <label for="picture">Picture URL</label>
-                <input id="picture" type="text" placeholder="IMGUR or GIPHY" name="profilePic">
+                <input id="picture" type="text" placeholder="IMGUR or GIPHY" name="profilePic" value="">
             </div>
 
             <div class="pure-control-group">
                 <label for="slogan">Slogan</label>
-                <input id="slogan" type="text" placeholder="Personal Message" name="slogan">
+                <input id="slogan" type="text" placeholder="Personal Message" name="slogan" value="">
             </div>
 
             <div class="pure-controls">
                 <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                <button class="pure-button pure-button-primary"><a href="/{{profileId}}">BACK</a></button>
             </div>
+
+
         </fieldset>
     </form>
 </div>

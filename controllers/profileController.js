@@ -25,9 +25,13 @@ const profileController = {
     show: (req, res) => {
         const profileId = req.params.id
         Profile.findById(profileId).then((profile) => {
-          console.log(profile)
-          res.render('profile/show', { profile })
+            console.log(profile)
+            res.render('profile/show', { profile })
         })
-      } 
+    },
+    edit: (req, res) => {
+        const profileId = req.params.id
+        res.render('profile/edit', { profileId })
+    }
 }
 module.exports = profileController

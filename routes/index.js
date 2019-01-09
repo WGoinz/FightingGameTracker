@@ -10,8 +10,8 @@ router.get('/', profileController.index)
 router.post('/', profileController.create)
 router.get('/new', profileController.new)
 router.get('/:id', profileController.show)
-// router.get('/:id/edit', profileController.edit)
-// router.patch('/:id', profileController.update)
+router.get('/:id/edit', profileController.edit)
+router.patch('/:id', profileController.update)
 // router.delete('/:id', profileController.delete)
 
 
