@@ -10,10 +10,15 @@
     <div>
         <h2>{{profile.username}}</h2>
         <h3>{{profile.slogan}}</h3>
-        <button><a href="{{profile._id}}/edit">Edit Profile</a></button>
+        <button class="pure-form pure-form-aligned"><a href="{{profile._id}}/edit">Edit Profile</a></button>
+        <form action="/{{profile._id}}?_method=DELETE" method="POST" class="pure-form pure-form-aligned">
+            <button class="btn" type="submit">Delete Profile</button>
+        </form>
 
     </div>
 </div>
+
+
 
 <div class="flex">
     {{#each profile.characters}}

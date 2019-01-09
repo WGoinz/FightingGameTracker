@@ -12,7 +12,7 @@ const profileController = {
         res.render("profile/new")
     },
     create: (req, res) => {
-        console.log(req.body)
+        // console.log(req.body)
         Profile.create({
             username: req.body.username,
             profilePic: req.body.profilePic,
@@ -25,7 +25,7 @@ const profileController = {
     show: (req, res) => {
         const profileId = req.params.id
         Profile.findById(profileId).then((profile) => {
-            console.log(profile)
+            // console.log(profile)
             res.render('profile/show', { profile })
         })
     },
@@ -37,6 +37,12 @@ const profileController = {
         const profileId = req.params.id
         Profile.findByIdAndUpdate(profileId, req.body, { new: true }).then((profile) => {
             res.redirect(`/${profileId}`)
+        })
+    },
+    delete: (req, res) => {
+        const profileId = req.params.id
+        Profile.findByIdAndRemove(profileId).then(() => {
+            res.redirect('/')
         })
     }
 

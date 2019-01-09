@@ -12,10 +12,10 @@ router.get('/new', profileController.new)
 router.get('/:id', profileController.show)
 router.get('/:id/edit', profileController.edit)
 router.patch('/:id', profileController.update)
-// router.delete('/:id', profileController.delete)
+router.delete('/:id', profileController.delete)
 
 
-router.get('/:id/character', characterController.index)
+// router.get('/:id/character', characterController.index)
 
 
 
