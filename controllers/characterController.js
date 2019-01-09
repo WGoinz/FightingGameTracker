@@ -10,7 +10,7 @@ const characterController = {
     new: (req, res) => {
         const profileId = req.params.id
         console.log("New view")
-        res.render("character/new", {profileId})
+        res.render("character/new", { profileId })
     },
     create: (req, res) => {
         const profileId = req.params.id
@@ -28,11 +28,10 @@ const characterController = {
         })
     },
     show: (req, res) => {
+        const characterId = req.params.characterId
         const profileId = req.params.id
-        Profile.findById(profileId).populate("characters").then((profile) => {
-            // console.log(profile)
-            const characters = profile.characters
-            res.render('character/show', { characters, profile })
+        Character.findById(characterId).then((character) => {
+            res.render('character/show', { character, profileId })
         })
     }
 }

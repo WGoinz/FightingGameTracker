@@ -1,3 +1,12 @@
 <div>
-    <h1 class="no-margin bottom-margin">CHARACTERS</h1>
+    <h1 class="no-margin bottom-margin">{{character.name}}</h1>
 </div>
+
+<div class="flex-column charSpacing">
+    <ul>
+        <li>{{character.archetype}}</li>
+        <li>{{character.stamina}}</li>
+    </ul>
+    <img class="characterImg" src="{{character.characterImg}}">
+</div>
+<button class="pure-button pure-button-primary"><a href="/{{profileId}}">BACK</a></button>
