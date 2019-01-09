@@ -2,7 +2,7 @@ Profile = require("../models/Profile")
 
 const profileController = {
     index: (req, res) => {
-        console.log("Profile controller working")
+        // console.log("Profile controller working")
         Profile.find({}).then(profile => {
             res.render('profile/index', { profile })
         })
