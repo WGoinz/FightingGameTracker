@@ -55,6 +55,15 @@ const statsController = {
             .then((stat) => {
                 res.redirect(`/${profileId}/characters/${characterId}/stats`)
             })
+    },
+    delete: (req, res) => {
+        const profileId = req.params.id
+        const characterId = req.params.characterId
+        const statId = req.params.statId
+        Stats.findByIdAndDelete(statId)
+            .then(() => {
+                res.redirect(`/${profileId}/characters/${characterId}/stats`)
+            })
     }
 }
 module.exports = statsController

@@ -25,3 +25,6 @@
 </div>
 <button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{characterId}}/stats/{{stat._id}}/edit">EDIT</a></button>
 <button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{characterId}}/stats">BACK</a></button>
+<form action="/{{profileId}}/characters/{{characterId}}/stats/{{stat._id}}?_method=DELETE" method="POST" class="pure-form pure-form-aligned">
+    <button class="pure-button pure-button-primary" type="submit">DELETE</button>
+</form>

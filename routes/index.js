@@ -29,6 +29,8 @@ router.get('/:id/characters/:characterId/stats/new', statsController.new)
 router.get('/:id/characters/:characterId/stats/:statId', statsController.show)
 router.get('/:id/characters/:characterId/stats/:statId/edit', statsController.edit)
 router.patch('/:id/characters/:characterId/stats/:statId/', statsController.update)
+router.delete('/:id/characters/:characterId/stats/:statId/', statsController.delete)
+
 
 
 
