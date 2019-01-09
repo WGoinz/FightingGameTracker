@@ -1,3 +1,36 @@
 <div>
     <h1 class="no-margin bottom-margin">EDIT | CHARACTER</h1>
 </div>
+
+<div class="formcenter">
+    {{!-- <span>CREATE NEW USER</span> --}}
+    <form action="/{{profileId}}/characters/{{characterId}}?_method=PATCH" method="POST" class="pure-form pure-form-aligned">
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="name">Character Name</label>
+                <input id="name" type="text" placeholder="Character Name" name="name">
+                {{!-- <span class="pure-form-message-inline">This is a required field.</span> --}}
+            </div>
+
+            <div class="pure-control-group">
+                <label for="archetype">Style</label>
+                <input id="archetype" type="text" placeholder="Offensive, Defensive" name="archetype">
+            </div>
+
+            <div class="pure-control-group">
+                <label for="characterImg">Image URL</label>
+                <input id="characterImg" type="text" placeholder="IMGUR or GIPHY" name="characterImg">
+            </div>
+
+            <div class="pure-control-group">
+                <label for="stamina">Stamina</label>
+                <input id="stamina" type="text" placeholder="Stamina Value" name="stamina">
+            </div>
+
+            <div class="pure-controls">
+                <button type="submit" class="pure-button pure-button-primary">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+    <button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{characterId}}">BACK</a></button>
+</div>

@@ -19,6 +19,10 @@ router.get('/:id/characters/', characterController.index)
 router.post('/:id/characters/', characterController.create)
 router.get('/:id/characters/new', characterController.new)
 router.get('/:id/characters/:characterId', characterController.show)
+router.get('/:id/characters/:characterId/edit', characterController.edit)
+router.patch('/:id/characters/:characterId/', characterController.update)
+
+
 
 
 

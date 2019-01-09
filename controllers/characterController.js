@@ -33,6 +33,19 @@ const characterController = {
         Character.findById(characterId).then((character) => {
             res.render('character/show', { character, profileId })
         })
+    },
+    edit: (req, res) => {
+        const profileId = req.params.id
+        const characterId = req.params.characterId
+        res.render('character/edit', { profileId, characterId })
+    },
+    update: (req, res) => {
+        const profileId = req.params.id
+        const characterId = req.params.characterId
+        Character.findByIdAndUpdate(characterId, req.body, { new: true })
+            .then((character) => {
+                res.redirect(`/${profileId}`)
+            })
     }
 }
 
