@@ -1,0 +1,30 @@
+<div>
+    <h1 class="no-margin bottom-margin">Stats</h1>
+</div>
+<div>
+    {{#each stat}}
+    <table class="pure-table">
+        <thead>
+            <tr>
+                <th>Tournament Name</th>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Total Matches</th>
+                <th>Victory Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{tournamentName}}</td>
+                <td>{{wins}}</td>
+                <td>{{losses}}</td>
+                <td>{{matches}}</td>
+                <td>{{victoryPercentage}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button>Edit</button>
+    {{/each}}
+</div>
+
+<button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{characterId}}">BACK</a></button>
