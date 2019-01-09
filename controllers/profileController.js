@@ -32,6 +32,13 @@ const profileController = {
     edit: (req, res) => {
         const profileId = req.params.id
         res.render('profile/edit', { profileId })
+    },
+    update: (req, res) => {
+        const profileId = req.params.id
+        Profile.findByIdAndUpdate(profileId, req.body, { new: true }).then((profile) => {
+            res.redirect(`/${profileId}`)
+        })
     }
+
 }
 module.exports = profileController
