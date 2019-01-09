@@ -40,6 +40,21 @@ const statsController = {
         Stats.findById(statId).then((stat) => {
             res.render('stats/show', { stat, profileId, characterId })
         })
+    },
+    edit: (req, res) => {
+        const profileId = req.params.id
+        const characterId = req.params.characterId
+        const statId = req.params.statId
+        res.render('stats/edit', { statId, profileId, characterId })
+    },
+    update: (req, res) => {
+        const profileId = req.params.id
+        const characterId = req.params.characterId
+        const statId = req.params.statId
+        Stats.findByIdAndUpdate(statId, req.body, { new: true })
+            .then((stat) => {
+                res.redirect(`/${profileId}/characters/${characterId}/stats`)
+            })
     }
 }
 module.exports = statsController

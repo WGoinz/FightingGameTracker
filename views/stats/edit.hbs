@@ -3,7 +3,7 @@
 </div>
 
 <div class="formcenter">
-    <form action="/{{profileId}}/characters/{{characterId}}/stats" method="POST" class="pure-form pure-form-aligned">
+    <form action="/{{profileId}}/characters/{{characterId}}/stats/{{statId}}?_method=PATCH" method="POST" class="pure-form pure-form-aligned">
         <fieldset>
             <div class="pure-control-group">
                 <label for="tournamentName">Tournament Name</label>
@@ -30,5 +30,5 @@
             </div>
         </fieldset>
     </form>
-    <button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{characterId}}/stats">BACK</a></button>
+    <button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{characterId}}/stats/{{statId}}">BACK</a></button>
 </div>
