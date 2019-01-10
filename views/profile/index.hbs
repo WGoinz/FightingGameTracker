@@ -2,15 +2,16 @@
     <h1 class="no-margin bottom-margin shrikhand">PROFILES</h1>
 </div>
 
-<div class="flex">
+<div class="flex flex-wrap">
     {{#each profile}}
-    <div class="profile flex-column ">
-        <u>
-            <a href="{{_id}}">
-                <h3 class="work-sans">{{username}}</h3>
-            </a>
-        </u>
-        <img class="profileImg" src={{profilePic}} alt="profile pic">
+    <div class="profile flex-column flex-wrap">
+        <a href="{{_id}}">
+            <div>
+                {{username}}
+            </div>
+            <img class="profileImg" src={{profilePic}} alt="profile pic">
+        </a>
+
         {{!-- <button class="pure-button pure-button-primary"><a class="work-sans" href="{{_id}}">VIEW PROFILE</a></button>
         --}}
     </div>
