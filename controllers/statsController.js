@@ -45,7 +45,9 @@ const statsController = {
         const profileId = req.params.id
         const characterId = req.params.characterId
         const statId = req.params.statId
-        res.render('stats/edit', { statId, profileId, characterId })
+        Stats.findById(statId).then((stat) => {
+            res.render('stats/edit', { statId, profileId, characterId, stat })
+        })
     },
     update: (req, res) => {
         const profileId = req.params.id

@@ -1,30 +1,29 @@
 <div>
     <h1 class="no-margin bottom-margin">EDIT | CHARACTER</h1>
 </div>
-
 <div class="formcenter">
     {{!-- <span>CREATE NEW USER</span> --}}
     <form action="/{{profileId}}/characters/{{characterId}}?_method=PATCH" method="POST" class="pure-form pure-form-aligned">
         <fieldset>
             <div class="pure-control-group">
                 <label for="name">Character Name</label>
-                <input id="name" type="text" placeholder="Character Name" name="name">
+                <input id="name" type="text" placeholder="Character Name" name="name" value="{{character.name}}">
                 {{!-- <span class="pure-form-message-inline">This is a required field.</span> --}}
             </div>
 
             <div class="pure-control-group">
                 <label for="archetype">Style</label>
-                <input id="archetype" type="text" placeholder="Offensive, Defensive" name="archetype">
+                <input id="archetype" type="text" placeholder="Offensive, Defensive" name="archetype" value="{{character.archetype}}">
             </div>
 
             <div class="pure-control-group">
                 <label for="characterImg">Image URL</label>
-                <input id="characterImg" type="text" placeholder="IMGUR or GIPHY" name="characterImg">
+                <input id="characterImg" type="text" placeholder="IMGUR or GIPHY" name="characterImg" value="{{character.characterImg}}">
             </div>
 
             <div class="pure-control-group">
                 <label for="stamina">Stamina</label>
-                <input id="stamina" type="text" placeholder="Stamina Value" name="stamina">
+                <input id="stamina" type="text" placeholder="Stamina Value" name="stamina" value="{{character.stamina}}">
             </div>
 
             <div class="pure-controls">

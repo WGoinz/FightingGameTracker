@@ -1,29 +1,29 @@
 <div>
     <h1 class="no-margin bottom-margin">EDIT STAT</h1>
 </div>
-
 <div class="formcenter">
     <form action="/{{profileId}}/characters/{{characterId}}/stats/{{statId}}?_method=PATCH" method="POST" class="pure-form pure-form-aligned">
         <fieldset>
             <div class="pure-control-group">
                 <label for="tournamentName">Tournament Name</label>
-                <input id="tournamentName" type="text" placeholder="Tournament Name" name="tournamentName">
+                <input id="tournamentName" type="text" placeholder="Tournament Name" name="tournamentName" value="{{stat.tournamentName}}">
             </div>
             <div class="pure-control-group">
                 <label for="wins">Wins</label>
-                <input id="wins" type="text" placeholder="Number of wins" name="wins">
+                <input id="wins" type="text" placeholder="Number of wins" name="wins" value="{{stat.wins}}">
             </div>
             <div class="pure-control-group">
                 <label for="losses">Losses</label>
-                <input id="losses" type="text" placeholder="Number of losses" name="losses">
+                <input id="losses" type="text" placeholder="Number of losses" name="losses" value="{{stat.losses}}">
             </div>
             <div class="pure-control-group">
                 <label for="matches">Matches</label>
-                <input id="matches" type="text" placeholder="Number of matches" name="matches">
+                <input id="matches" type="text" placeholder="Number of matches" name="matches" value="{{stat.matches}}">
             </div>
             <div class="pure-control-group">
                 <label for="victoryPercentage">Victory Percentage</label>
-                <input id="victoryPercentage" type="text" placeholder="Victory Percentage" name="victoryPercentage">
+                <input id="victoryPercentage" type="text" placeholder="Victory Percentage" name="victoryPercentage"
+                    value="{{stat.victoryPercentage}}">
             </div>
             <div class="pure-controls">
                 <button type="submit" class="pure-button pure-button-primary">Submit</button>

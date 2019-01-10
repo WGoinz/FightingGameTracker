@@ -12,7 +12,6 @@ const profileController = {
         res.render("profile/new")
     },
     create: (req, res) => {
-        // console.log(req.body)
         Profile.create({
             username: req.body.username,
             profilePic: req.body.profilePic,
@@ -25,14 +24,16 @@ const profileController = {
     show: (req, res) => {
         const profileId = req.params.id
         Profile.findById(profileId).populate("characters").then((profile) => {
-            // console.log(profile)
             const characters = profile.characters
             res.render('profile/show', { characters, profile })
         })
     },
     edit: (req, res) => {
         const profileId = req.params.id
-        res.render('profile/edit', { profileId })
+        Profile.findById(profileId).then(profile => {
+            res.render('profile/edit', { profile, profileId })
+        })
+        // res.render('profile/edit', { profileId })
     },
     update: (req, res) => {
         const profileId = req.params.id

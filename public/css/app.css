@@ -85,6 +85,10 @@ li {
     background-color: lightseagreen;
 }
 
+.pure-table {
+    border: solid black 2px;
+}
+
 .flex {
     display: flex;
     /* justify-content: space-between; */

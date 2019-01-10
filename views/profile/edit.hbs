@@ -1,32 +1,28 @@
 <div>
     <h1 class="no-margin bottom-margin">EDIT | PROFILE</h1>
 </div>
-
-
-
 <div class="formcenter">
-    {{!-- <span>CREATE NEW USER</span> --}}
     <form class="pure-form pure-form-aligned" action="/{{profileId}}?_method=PATCH" method="POST">
         <fieldset>
             <div class="pure-control-group">
                 <label for="name">Username</label>
-                <input id="name" type="text" placeholder="Gamertag" name="username" value="">
-                {{!-- <span class="pure-form-message-inline">This is a required field.</span> --}}
+                <input id="name" type="text" placeholder="Gamertag" name="username" value="{{profile.username}}">
             </div>
 
             <div class="pure-control-group">
                 <label for="email">Email Address</label>
-                <input id="email" type="email" placeholder="Email Address" name="email" value="">
+                <input id="email" type="email" placeholder="Email Address" name="email" value="{{profile.email}}">
             </div>
 
             <div class="pure-control-group">
                 <label for="picture">Picture URL</label>
-                <input id="picture" type="text" placeholder="IMGUR or GIPHY" name="profilePic" value="">
+                <input id="picture" type="text" placeholder="IMGUR or GIPHY" name="profilePic" value="{{profile.profilePic}}
+">
             </div>
 
             <div class="pure-control-group">
                 <label for="slogan">Slogan</label>
-                <input id="slogan" type="text" placeholder="Personal Message" name="slogan" value="">
+                <input id="slogan" type="text" placeholder="Personal Message" name="slogan" value="{{profile.slogan}}">
             </div>
 
             <div class="pure-controls">
