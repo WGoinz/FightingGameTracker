@@ -2,7 +2,6 @@
     <h1 class="no-margin bottom-margin">MY PROFILE</h1>
 </div>
 
-
 <div class="flex bottom-margin">
     <div class="imgBorder">
         <img class="profilePic" src="{{profile.profilePic}}" alt="profile picture">
@@ -11,10 +10,27 @@
     <div class="flex-grow">
         <h2>{{profile.username}}</h2>
         <h3>"{{profile.slogan}}"</h3>
-        <button class="pure-button pure-button-primary"><a href="{{profile._id}}/edit">Edit Profile</a></button>
-        <form action="/{{profile._id}}?_method=DELETE" method="POST" class="pure-form pure-form-aligned">
-            <button class="pure-button pure-button-primary" type="submit">Delete Profile</button>
-        </form>
+        <div class="pure-menu pure-menu-horizontal centerImg">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                    <a href="#" id="menuLink1" class="pure-menu-link">Modify</a>
+                    <ul class="pure-menu-children">
+                        <li class="pure-menu-item"><a href="{{profile._id}}/edit" class="pure-menu-link">Edit
+                                Profile</a></li>
+                        <li>
+                        <li class="pure-menu-item"><a href="/{{profile._id}}/characters/new" class="pure-menu-link">Add
+                                New Character
+                            </a></li>
+                        <li>
+                            <form action="/{{profile._id}}?_method=DELETE" method="POST" class="pure-form pure-form-aligned">
+                                <button class="pure-button pure-button-primary" type="submit">Delete Profile</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
 
     </div>
 </div>
@@ -23,8 +39,8 @@
     <h2 class="no-margin">CHARACTERS</h2>
 </div>
 
-<div class="flex bottom-margin">
-    {{#each profile.characters}}
+<div class="flex bottom-margin flex-wrap">
+    {{#each characters}}
     <div class="flex-column charSpacing">
         <h3>{{name}}</h3>
         <a href="{{../profile._id}}/characters/{{_id}}" alt="view character">
@@ -33,8 +49,4 @@
         {{!-- <button class="pure-button pure-button-primary"></button> --}}
     </div>
     {{/each}}
-</div>
-
-<div>
-    <button class="pure-button pure-button-primary"><a href="/{{profile._id}}/characters/new">Add New Character</a></button>
 </div>

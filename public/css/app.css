@@ -89,6 +89,10 @@ li {
     border: solid black 2px;
 }
 
+.pure-table td, .pure-table th {
+    border-left: solid black 2px;
+}
+
 .flex {
     display: flex;
     /* justify-content: space-between; */
