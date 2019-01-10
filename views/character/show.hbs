@@ -1,18 +1,41 @@
+<div class="centerImg">
+    <div class="flex-column">
+        <img class="characterViewImg" src="{{character.characterImg}}">
+    </div>
+    <div class="pure-menu pure-menu-horizontal centerImg">
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="/{{profileId}}" class="pure-menu-link">My Profile</a></li>
+            <li class="pure-menu-item pure-menu-selected"><a href="/{{profileId}}/characters/{{character._id}}/stats"
+                    class="pure-menu-link">View
+                    Stats</a></li>
+
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="#" id="menuLink1" class="pure-menu-link">Modify</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a href="/{{profileId}}/characters/{{character._id}}/edit" class="pure-menu-link">Edit
+                            Character</a></li>
+                    <li>
+                        <form action="/{{profileId}}/characters/{{character._id}}?_method=DELETE" method="POST" class="pure-form pure-form-aligned">
+                            <button class="pure-button pure-button-primary" type="submit">Delete Character</button>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
 <div>
     <h1 class="no-margin bottom-margin">{{character.name}}</h1>
 </div>
+<h2>Archetype: {{character.archetype}}</h2>
+<h2>Stamina: {{character.stamina}}</h2>
 
-<div class="flex-column charSpacing">
-    <ul>
-        <li>{{character.archetype}}</li>
-        <li>{{character.stamina}}</li>
-    </ul>
-    <img class="characterImg" src="{{character.characterImg}}">
-</div>
-<button class="pure-button pure-button-primary"><a href="/{{profileId}}">BACK</a></button>
-<button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{character._id}}/edit">EDIT
-        CHARACTER</a></button>
-<button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{character._id}}/stats">VIEW STATS</a></button>
-<form action="/{{profileId}}/characters/{{character._id}}?_method=DELETE" method="POST" class="pure-form pure-form-aligned">
+
+{{!-- <button class="pure-button pure-button-primary">BACK</a></button> --}}
+{{!-- <button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{character._id}}/edit">EDIT
+        CHARACTER</a></button> --}}
+{{!-- <button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{character._id}}/stats">VIEW
+        STATS</a></button> --}}
+{{!-- <form action="/{{profileId}}/characters/{{character._id}}?_method=DELETE" method="POST" class="pure-form pure-form-aligned">
     <button class="pure-button pure-button-primary" type="submit">Delete Character</button>
-</form>
+</form> --}}
