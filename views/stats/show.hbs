@@ -1,6 +1,26 @@
 <div>
     <h1 class="no-margin bottom-margin font">Individual Stat</h1>
 </div>
+<div class="pure-menu pure-menu-horizontal centerImg">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-selected"><a href="/{{profileId}}" class="pure-menu-link">My Profile</a></li>
+        <li class="pure-menu-item pure-menu-selected"><a href="/{{profileId}}/characters/{{character._id}}/stats" class="pure-menu-link">View
+                Stats</a></li>
+
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+            <a href="#" id="menuLink1" class="pure-menu-link">Modify</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a href="/{{profileId}}/characters/{{character._id}}/edit" class="pure-menu-link">Edit
+                        Character</a></li>
+                <li>
+                    <form action="/{{profileId}}/characters/{{character._id}}?_method=DELETE" method="POST" class="pure-form pure-form-aligned">
+                        <button class="pure-button pure-button-primary" type="submit">Delete Character</button>
+                    </form>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
 <div>
     <table class="pure-table">
         <thead>

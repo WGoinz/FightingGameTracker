@@ -4,7 +4,13 @@
 {{!-- {{stats}} --}}
 {{!-- {{characterId}}
 {{!-- {{profileId}} --}}
-
+<div class="pure-menu pure-menu-horizontal centerImg">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-selected"><a href="/{{profileId}}/characters/{{characterId}}" class="pure-menu-link">Previous</a></li>
+        <li class="pure-menu-item pure-menu-selected"><a href="/{{profileId}}/characters/{{characterId}}/stats/new"
+                class="pure-menu-link">New Stat</a></li>
+    </ul>
+</div>
 <div>
     {{#each stats}}
     <table class="pure-table">
@@ -30,5 +36,3 @@
     <button class="pure-button pure-button-primary"><a href="/{{../profileId}}/characters/{{../characterId}}/stats/{{_id}}">VIEW</a></button>
     {{/each}}
 </div>
-<button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{characterId}}/stats/new">ADD</a></button>
-<button class="pure-button pure-button-primary"><a href="/{{profileId}}/characters/{{characterId}}">BACK</a></button>

@@ -1,3 +1,7 @@
+html {
+    font-family: 'Work Sans', sans-serif;
+}
+
 body {
     max-width: 50vw;
     margin: 0 auto;
@@ -52,6 +56,15 @@ li {
     font-family: 'Work Sans', sans-serif;
     background-color: white;
     text-decoration: none;
+}
+
+.pure-table thead {
+    background-color: lightseagreen;
+    font-family: 'Shrikhand', cursive;
+}
+
+.pure-table tbody {
+    background-color: white;
 }
 
 .pure-menu-link {
