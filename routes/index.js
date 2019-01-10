@@ -14,7 +14,6 @@ router.get('/:id/edit', profileController.edit)
 router.patch('/:id', profileController.update)
 router.delete('/:id', profileController.delete)
 
-
 router.get('/:id/characters/', characterController.index)
 router.post('/:id/characters/', characterController.create)
 router.get('/:id/characters/new', characterController.new)
@@ -30,17 +29,5 @@ router.get('/:id/characters/:characterId/stats/:statId', statsController.show)
 router.get('/:id/characters/:characterId/stats/:statId/edit', statsController.edit)
 router.patch('/:id/characters/:characterId/stats/:statId/', statsController.update)
 router.delete('/:id/characters/:characterId/stats/:statId/', statsController.delete)
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router

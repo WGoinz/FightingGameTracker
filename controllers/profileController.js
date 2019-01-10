@@ -2,7 +2,6 @@ Profile = require("../models/Profile")
 
 const profileController = {
     index: (req, res) => {
-        // console.log("Profile controller working")
         Profile.find({}).then(profile => {
             res.render('profile/index', { profile })
         })
@@ -33,7 +32,6 @@ const profileController = {
         Profile.findById(profileId).then(profile => {
             res.render('profile/edit', { profile, profileId })
         })
-        // res.render('profile/edit', { profileId })
     },
     update: (req, res) => {
         const profileId = req.params.id
