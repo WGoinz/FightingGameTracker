@@ -15,3 +15,8 @@ https://i.imgur.com/kiJDFsA.jpg - Ibuki
 https://i.imgur.com/HOkEbgl.jpg - M. Bison
 https://i.imgur.com/G7Cc0lE.png - E. Honda
 https://i.imgur.com/TEZku9F.jpg - Akuma
+
+Fonts
+https://fonts.googleapis.com/css?family=Shrikhand|Work+Sans
+Reference: font-family: 'Shrikhand', cursive;
+font-family: 'Work Sans', sans-serif;

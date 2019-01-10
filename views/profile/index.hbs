@@ -1,13 +1,18 @@
 <div>
-    <h1 class="no-margin bottom-margin">PROFILES</h1>
+    <h1 class="no-margin bottom-margin shrikhand">PROFILES</h1>
 </div>
 
 <div class="flex">
     {{#each profile}}
-    <div class="profile flex-column">
-        <h3>{{username}}</h3>
-        <img src="https://i.imgur.com/cvpuu7I.png" alt="profile pic">
-        <button class="pure-button pure-button-primary"><a href="{{_id}}">VIEW PROFILE</a></button>
+    <div class="profile flex-column ">
+        <u>
+            <a href="{{_id}}">
+                <h3 class="work-sans">{{username}}</h3>
+            </a>
+        </u>
+        <img class="profileImg" src="https://i.imgur.com/cvpuu7I.png" alt="profile pic">
+        {{!-- <button class="pure-button pure-button-primary"><a class="work-sans" href="{{_id}}">VIEW PROFILE</a></button>
+        --}}
     </div>
     {{/each}}
 </div>
