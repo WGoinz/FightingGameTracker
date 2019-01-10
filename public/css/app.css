@@ -16,6 +16,15 @@ h1 {
     /* background-color: darkgrey; */
 }
 
+.pure-menu-link {
+    color: black;
+    background-color: white;
+}
+
+.pure-menu-horizontal {
+    margin-bottom: 15px;
+}
+
 .flex {
     display: flex;
     /* justify-content: space-between; */
