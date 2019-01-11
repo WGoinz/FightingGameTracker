@@ -9,7 +9,6 @@ const characterController = {
     },
     new: (req, res) => {
         const profileId = req.params.id
-        console.log("New view")
         res.render("character/new", { profileId })
     },
     create: (req, res) => {

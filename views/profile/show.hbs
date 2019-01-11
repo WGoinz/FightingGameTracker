@@ -45,6 +45,9 @@
         <a href="{{../profile._id}}/characters/{{_id}}" alt="view character">
             <img class="characterImg" src="{{characterImg}}">
         </a>
+        <form action="/{{../profile._id}}/{{_id}}?_method=PATCH" method="POST" class="pure-form pure-form-aligned">
+            <button class="pure-button pure-button-primary" type="submit">Delete Character</button>
+        </form>
     </div>
     {{/each}}
 </div>

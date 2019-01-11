@@ -7,7 +7,6 @@ const profileController = {
         })
     },
     new: (req, res) => {
-        console.log("New view")
         res.render("profile/new")
     },
     create: (req, res) => {
@@ -44,7 +43,18 @@ const profileController = {
         Profile.findByIdAndRemove(profileId).then(() => {
             res.redirect('/')
         })
-    }
+    },
+    removeChar: (req, res) => {
+        const profileId = req.params.id
+        const charId = req.params.charId
+        Profile.findByIdAndUpdate(profileId, { $pull: { characters: charId } }).then(() => {
+            console.log("Removed")
+        }).then(() => {
+            res.redirect(`/${profileId}`)
+        })
 
+    }
 }
+
+
 module.exports = profileController

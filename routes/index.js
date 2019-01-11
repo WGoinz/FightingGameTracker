@@ -13,6 +13,8 @@ router.get('/:id', profileController.show)
 router.get('/:id/edit', profileController.edit)
 router.patch('/:id', profileController.update)
 router.delete('/:id', profileController.delete)
+router.patch('/:id/:charId', profileController.removeChar)
+
 
 router.get('/:id/characters/', characterController.index)
 router.post('/:id/characters/', characterController.create)
